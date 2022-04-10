@@ -1,0 +1,86 @@
+{
+  "RN ts untyped component": {
+    "prefix": "comp_untyped",
+    "body": [
+      "import {View, Text} from 'react-native';",
+      "import React from 'react';",
+      "",
+      "",
+      "const ${1:${TM_FILENAME_BASE:Component}} = () => {",
+      "  return (",
+      "    <View>",
+      "      <Text>Welcome to ${1:${TM_FILENAME_BASE:Component}}</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE:Component}};"
+    ],
+    "description": "Untyped RN component"
+  },
+  "RN ts component": {
+    "prefix": "comp",
+    "body": [
+      "import {View, Text} from 'react-native';",
+      "import React from 'react';",
+      "",
+      "type ${1:${TM_FILENAME_BASE:Component}}Props = {};",
+      "",
+      "const ${1:${TM_FILENAME_BASE:Component}}: React.FC<${1:${TM_FILENAME_BASE:Component}}Props> = ({}) => {",
+      "  return (",
+      "    <View>",
+      "      <Text>Welcome to ${1:${TM_FILENAME_BASE:Component}}</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE:Component}};"
+    ],
+    "description": "Typed RN component"
+  },
+  "Root style": {
+    "prefix": "rootSyle",
+    "body": [
+      "const styles = StyleSheet.create({",
+      "  root: {",
+      "    flex: 1,",
+      "    backgroundColor: '#fff',",
+      "    justifyContent: 'center',",
+      "    alignItems: 'center',",
+      "  },",
+      "});"
+    ],
+    "description": "basic root container styles"
+  },
+  "window dimensions": {
+    "prefix": "dimensions",
+    "body": [
+      "const {width, height} = Dimensions.get(\"window\");"
+    ],
+    "description": "get window dimensions"
+  },
+  "Ignore logs": {
+    "prefix": "logbox",
+    "body": [
+      "LogBox.ignoreLogs(${1:['[react-native-gesture-handler]']});"
+    ],
+    "description": "ignore logs"
+  },
+  "Zustand store": {
+    "prefix": "zs",
+    "body": [
+      "import create from 'zustand';",
+      "",
+      "type ${1:Store} = {",
+      "  ${2:object}: ${3:any};",
+      "  mutate: (newStr: string) => void;",
+      "};",
+      "",
+      "export default create<${1:Store}>(set => ({",
+      "  ${2:object}: 'Glaze',",
+      "  mutate: (${4:newObject}: ${3:any}) => set(state => ({...state, ${2:object}: ${4:newObject}})),",
+      "}));"
+    ],
+    "description": "Zustand store"
+  }
+}

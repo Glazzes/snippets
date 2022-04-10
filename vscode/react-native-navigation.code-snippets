@@ -1,0 +1,32 @@
+{
+  "RNN comp": {
+    "prefix": "rnn_comp",
+    "body": [
+      "import {View, Text} from 'react-native';",
+      "import React from 'react';",
+      "import {NavigationFunctionComponent} from 'react-native-navigation';",
+      "",
+      "type ${1:${TM_FILENAME_BASE:Component}}Props = {};",
+      "",
+      "const ${1:${TM_FILENAME_BASE:Component}}: NavigationFunctionComponent<${1:${TM_FILENAME_BASE:Component}}Props> = ({}) => {",
+      "  return (",
+      "    <View>",
+      "      <Text>Welcome to ${1:${TM_FILENAME_BASE:Component}}</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "${1:${TM_FILENAME_BASE:Component}}.options = {",
+      "  statusBar: {",
+      "    visible: false,",
+      "  },",
+      "  topBar: {",
+      "    visible: false,",
+      "  },",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE:Component}};"
+    ],
+    "description": "RNN comp"
+  }
+}

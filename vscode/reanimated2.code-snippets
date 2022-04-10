@@ -1,0 +1,69 @@
+{
+  "Worklet": {
+    "prefix": "worklet",
+    "body": ["const ${1:worklet} = ($2): ${3:void} => {", "  'worklet';", "}"],
+    "description": "worklet function"
+  },
+  "shared value": {
+    "prefix": "shared_value",
+    "body": ["const ${1:sharedValue} = useSharedValue<${2:number}>(${3:0});"],
+    "description": "useSharedValue"
+  },
+  "derived value": {
+    "prefix": "derived",
+    "body": [
+      "const ${1:derivedValue} = useDerivedValue<${2:number}>(() => {",
+      "    return 0;",
+      "  }, [${3:deps}]);"
+    ],
+    "description": "useDerivedValue"
+  },
+  "Animated reaction": {
+    "prefix": "reaction",
+    "body": ["useAnimatedReaction(", "    () => ${1:value},", "    ${2:value} => {},", "  );"],
+    "description": "Animated reaction"
+  },
+  "Scroll handler": {
+    "prefix": "onScroll",
+    "body": [
+      "const ${1:onScroll} = useAnimatedScrollHandler<{${2:y}: number}>({",
+      "    onScroll: (e, ctx) => {}",
+      "});"
+    ],
+    "description": "Animated scroll handler"
+  },
+  "translate vector": {
+    "prefix": "tv",
+    "body": ["const ${1:translate} = useVector(0, 0);"],
+    "description": "translate vector"
+  },
+  "translate": {
+    "prefix": "txy",
+    "body": ["const translate${1|X,Y|} = useSharedValue<number>(0);"],
+    "description": "translate"
+  },
+  "reanimated style": {
+    "prefix": "rstyle",
+    "body": ["const ${1:rStyle} = useAnimatedStyle(() => {", "      return {};", "});"],
+    "description": "reanimated style"
+  },
+  "pan gesture": {
+    "prefix": "pang",
+    "body": [
+      "const pan = Gesture.Pan()",
+      "    .onStart(e => {})",
+      "    .onChange(e => {})",
+      "    .onEnd(e => {});"
+    ],
+    "description": "pan gesture"
+  },
+  "fling gesture": {
+    "prefix": "flingg",
+    "body": [
+      "const fling = Gesture.Fling()",
+      "    .direction(Directions.${1|UP,DOWN,LEFT,RIGHT|})",
+      "    .onStart(e => {});"
+    ],
+    "description": "fling gesture"
+  }
+}
