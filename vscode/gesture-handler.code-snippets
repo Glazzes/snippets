@@ -1,0 +1,19 @@
+{
+    "Pan Gesture Full": {
+        "prefix": "panGestureFull",
+        "body": [
+          "const translate = useVector(0, 0);",
+          "const offset = useVector(0, 0);",
+          "const pan = Gesture.Pan()",
+          "  .onBegin(_ => {",
+          "    offset.x.value = translate.x.value;",
+          "    offset.y.value = translate.y.value;",
+          "  })",
+          "  .onChange(e => {",
+          "    translate.x.value = offset.x.value + e.translationX;",
+          "    translate.y.value = offset.y.value + e.translationY;",
+          "  });"
+        ],
+        "description": "Pan Gesture with translate and offset values"
+      },
+}

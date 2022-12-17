@@ -5,12 +5,12 @@
     "description": "worklet function"
   },
   "shared value": {
-    "prefix": "shared_value",
+    "prefix": "sharedValue",
     "body": ["const ${1:sharedValue} = useSharedValue<${2:number}>(${3:0});"],
     "description": "useSharedValue"
   },
   "derived value": {
-    "prefix": "derived",
+    "prefix": "derivedValue",
     "body": [
       "const ${1:derivedValue} = useDerivedValue<${2:number}>(() => {",
       "    return 0;",
@@ -24,7 +24,7 @@
     "description": "Animated reaction"
   },
   "Scroll handler": {
-    "prefix": "onScroll",
+    "prefix": "scrollHandler",
     "body": [
       "const ${1:onScroll} = useAnimatedScrollHandler<{${2:y}: number}>({",
       "    onScroll: (e, ctx) => {}",
@@ -33,22 +33,22 @@
     "description": "Animated scroll handler"
   },
   "translate vector": {
-    "prefix": "tv",
+    "prefix": "vector",
     "body": ["const ${1:translate} = useVector(0, 0);"],
     "description": "translate vector"
   },
   "translate": {
-    "prefix": "txy",
+    "prefix": "translateValue",
     "body": ["const translate${1|X,Y|} = useSharedValue<number>(0);"],
     "description": "translate"
   },
   "reanimated style": {
-    "prefix": "rstyle",
+    "prefix": "animatedStyle",
     "body": ["const ${1:rStyle} = useAnimatedStyle(() => {", "      return {};", "});"],
     "description": "reanimated style"
   },
   "pan gesture": {
-    "prefix": "pang",
+    "prefix": "pangesture",
     "body": [
       "const pan = Gesture.Pan()",
       "    .onStart(e => {})",
@@ -58,7 +58,7 @@
     "description": "pan gesture"
   },
   "fling gesture": {
-    "prefix": "flingg",
+    "prefix": "flingGesture",
     "body": [
       "const fling = Gesture.Fling()",
       "    .direction(Directions.${1|UP,DOWN,LEFT,RIGHT|})",
